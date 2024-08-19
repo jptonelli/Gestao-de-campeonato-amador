@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+    font-family: 'roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background: -webkit-linear-gradient(90deg, #000000,#121212,#000000);
+    background: linear-gradient(90deg, #000000,#121212,#000000);
+}
+
+.cabecalho {
+    display: block;
+}
+
+.links-redes-sociais {
+    height: 4vh;
+    background-color: #000;
+}
+
+.redes-sociais {
+    position: absolute;
+    right: 3%;
+}
+
+.cabecalho .redes-sociais .icon {
+    font-size: 25px;
+    color: #fff;
+    padding: 6px 20px 20px 0px;
+}
+
+.logo .img{
+    width: 200px;
+    top: 0;
+    margin-left: 75px;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu-options {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-right: 85px;
+}
+
+.options a{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: ease-in .5s;
+}
+
+.options a:hover {
+    color: #fe7b2d;
+    border-bottom: 1px solid #fe7b2d;
+}
+
+.options-btn a{
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ac0808;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: ease-in .5s;
+}
+
+.options-btn a:hover{
+    color: #fff;
+    background-color: #c70a0a;
+}
+
+.img-about {
+    aspect-ratio: 16/9;
+}

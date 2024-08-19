@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    font-family: 'roboto', sans-serif;
+}
+
+#next-game {
+    background: -webkit-linear-gradient(90deg, #000000,#121212,#000000);
+    background: linear-gradient(90deg, #000000,#121212,#000000);
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.game p {
+    color: #fff;
+}
+
+.game img {
+    width: 55%;
+}
+
+.details h4 {
+    font-weight: bold;
+    color: #fe7b2d;
+    position: absolute;
+    top: 90%;
+}
+
+.game .player {
+    width: 25%;
+}
+
+.away-team img {
+    width: 40%;
+}
+
+.title {
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: double;
+    margin-top: 50px;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.botao {
+    background-color: #e7e5e5;
+    color: #ac0808;
+    border: 1px solid #960a0a;
+}
+
+#calendar {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+    display: flex;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.botoes .ativo {
+    background-color: #ac0808;
+    color: #fff;
+    border: 1px solid #960a0a;
+}
+
+.title-galery {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: double;
+}
+
+#galeria {
+    width: 100%;
+    margin-top: 50px;
+    background: -webkit-linear-gradient(90deg, #000000,#121212,#000000);
+    background: linear-gradient(90deg, #000000,#121212,#000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria-img {
+    width: 400px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+
+.galeria-quadro {
+    width: 70%;
+    column-count: 3;
+    column-gap: 5px;
+    margin-left: 14%;
+    margin-top: 4%;
+}
+
+.galeria-img:hover {
+    width: 420px;
+    box-shadow: #121212;
+}
+
+.title-lastNews {
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: double;
+}
+
+.ultimasNoticias {
+    width: 70%;
+    column-count: 3;
+    column-gap: 5px;
+    margin-left: 14%;
+    margin-top: 4%;
+}
+
+#ultimasNoticias {
+    margin-top: 50px;
+}

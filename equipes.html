@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Equipes</title>
+
+    <!-- LINKS - CSS -->
+     <link rel="stylesheet" href="./assets/css/global/header.css">
+     <link rel="stylesheet" href="./assets/css/global/footer.css">
+     <link rel="stylesheet" href="./assets/css/pages/equipes.css">
+     <link rel="stylesheet" href="./assets/css/pages/index.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- SCRIPT -->
+     <script src="./assets/js/visibility.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="links-redes-sociais">
+                <div class="redes-sociais">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                    
+                    <a href="https://instagram.com/" target="_blank">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+
+                    <a href="https://youtube.com/" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="header">
+                <div class="logo">
+                    <img class="img" src="./assets/images/logo.png" alt="Logo do Torneio">
+                </div>
+                <div class="links">
+                    <ul class="menu-options">
+                        <li class="options"><a href="/index.html">Home</a></li>
+                        <li class="options"><a href="/about.html">Sobre</a></li>
+                        <li class="options"><a href="/equipes.html">Equipes</a></li>
+                        <li class="options"><a href="/loja.html">Loja</a></li>
+                        <li class="options-btn"><a href="/inscreva-se.html">Inscreva-se</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="title-equipes" style="margin-top: 75px;">Equipes Participantes</h2>
+        <section id="equipes">
+            <div class="card" style="width: 18rem;">
+                <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Santa Marina Atlético Clube</h5>
+                  <p class="card-text">Fundado em 15/08/1913</p>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time1">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            O Santa Marina Atlético Clube é um time amador de origem operária, fundado em 1913 por trabalhadores da antiga Companhia Vidraria Santa Marina. Localizado no bairro da Água Branca, zona oeste de São Paulo, o clube fica numa região de fábricas e possui um grande acervo. Já suas cores fazem referência à França, país de origem da empresa.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>4 Títulos Amador</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkhgjIwQB9kNSg6Un0u4YpTyStlkdig317UhuRn8KvAF2rKVQMcEqmcNRHZ3KWbB5fleM&usqp=CAU" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Atlético Barbarense</h5>
+                  <p class="card-text">Fundado em 10/02/2017</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time2">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            O Santa Marina Atlético Clube é um time amador de origem operária, fundado em 1913 por trabalhadores da antiga Companhia Vidraria Santa Marina. Localizado no bairro da Água Branca, zona oeste de São Paulo, o clube fica numa região de fábricas e possui um grande acervo. Já suas cores fazem referência à França, país de origem da empresa.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>4 Títulos Amador</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="data:image/png;base64,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" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">S.E Metalúrgicos</h5>
+                  <p class="card-text">Fundado em 08/12/1992</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time3">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            O Santa Marina Atlético Clube é um time amador de origem operária, fundado em 1913 por trabalhadores da antiga Companhia Vidraria Santa Marina. Localizado no bairro da Água Branca, zona oeste de São Paulo, o clube fica numa região de fábricas e possui um grande acervo. Já suas cores fazem referência à França, país de origem da empresa.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>4 Títulos Amador</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="data:image/png;base64,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" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Real Brasília</h5>
+                  <p class="card-text">Fundado em 22/02/1996</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time4">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Em 01 de Novembro de 2016, foi anunciado a troca de nome de Dom Pedro Bandeirante para Real Futebol Clube. Sua primeira competição sob o novo nome foi o Campeonato Brasiliense de 2017, terminando na sétima colocação.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>3 Títulos Amador</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.varzeapedia.com.br/wp-content/uploads/2015/09/Guarani-do-Peri-2-300x300.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Guaraní do Jardim Peri</h5>
+                  <p class="card-text">Fundado em 28/10/1971</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time5">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            A Associação Esporte Clube Guarani do Jardim Peri é um dos times de várzea mais respeitados da Zona Norte de São Paulo. Fundado em 28 de outubro de 1971, a equipe homenageia o bairro, que tem nome de origem indígina em seu escudo.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>2 Títulos Amadores</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.varzeapedia.com.br/wp-content/uploads/2015/06/Nacional-Mooca.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Nacional da Mooca</h5>
+                  <p class="card-text">Fundado em 09/03/1984</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time6">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            O Esporte Clube Nacional da Mooca é um time amador que representa a região da zona leste de São Paulo. Fundado em 9 de março de 1984,o time leva as cores azul, branco e preto em seus uniformes.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>1 Título Amador</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="http://www.varzeapedia.com.br/wp-content/uploads/2015/09/Represa-nova.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Represa Nova</h5>
+                  <p class="card-text">Fundado em 01/05/1956</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time7">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            O Represa Nova Futebol Clube é um time de várzea localizado no bairro Mar Paulista, região da Pedreira, Zona Sul de São Paulo. A equipe foi fundada em 1º de maio de 1956 pelo Sr. Alexandre Francisco Rebouças, português e, por isso, as cores do time era “Rubro Verde”.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>Sem Títulos</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.varzeapedia.com.br/wp-content/uploads/2015/06/1-de-maio-guaianases.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Esporte Clube 1º De Maio De Guaianases</h5>
+                  <p class="card-text">Fundado em 01/05/1950</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#time8">
+                    Saiba Mais!
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="time8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Santa Marina Atlético Clube</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            O Esporte Clube 1º de Maio foi fundado em 1950 na mesma data que leva o nome da equipe, um feriado de Dia do Trabalho. A equipe, representada pelas cores azul e branco, é do bairro de Guaianases, zona leste da capital paulista.
+                            <br><br><br>
+                            <h4>Estatísticas</h4>
+                            <p>Sem títulos</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>FutArena</h1>
+                <p>É tudo uma questão de seus sonhos.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>Contato</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">futArenaCampeonato@gmail.com</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">(14) 99999-9999</a>
+                </li>
+                <li>
+            
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Inscreva-se</h3>
+
+                <p>
+                    Inscreva seu time para participar conosco
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="icon fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2023 FutArena - Todos Os Direitos Reservados
+        </div>
+    </footer>
+</body>
+</html>

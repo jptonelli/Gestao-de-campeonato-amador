@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Equipes</title>
+
+    <!-- LINKS - CSS -->
+     <link rel="stylesheet" href="./assets/css/global/header.css">
+     <link rel="stylesheet" href="./assets/css/global/footer.css">
+     <link rel="stylesheet" href="./assets/css/pages/about.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- SCRIPT -->
+     <script src="./assets/js/visibility.js" defer></script>
+     <script src="./assets/js/timeline.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <div class="links-redes-sociais">
+                <div class="redes-sociais">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                    
+                    <a href="https://instagram.com/" target="_blank">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+
+                    <a href="https://youtube.com/" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="header">
+                <div class="logo">
+                    <img class="img" src="./assets/images/logo.png" alt="Logo do Torneio">
+                </div>
+                <div class="links">
+                    <ul class="menu-options">
+                        <li class="options"><a href="/index.html">Home</a></li>
+                        <li class="options"><a href="/about.html">Sobre</a></li>
+                        <li class="options"><a href="/equipes.html">Equipes</a></li>
+                        <li class="options"><a href="/loja.html">Loja</a></li>
+                        <li class="options-btn"><a href="">Inscreva-se</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="apresentacao">
+            <h2 class="title-about">SOBRE O CAMPEONATO</h2>   
+
+            <div class="bloco">
+                <div class="bloco-esquerdo">
+                    <div class="bloco-titulo">
+                        <h3>Bem vindo ao FutArena</h3>
+                    </div>
+                    <p>Aqui, a paixão pelo esporte se mistura à adrenalina da competição. <br>Cada equipe entra em campo com um só objetivo: conquistar a vitória e levantar a taça. <br> Preparem-se para duelos emocionantes, jogadas surpreendentes e muita garra. <br> Que vença o melhor!</p>
+                </div>
+
+                <div class="bloco-direito">
+                    <img src="https://www.lance.com.br/galerias/wp-content/uploads/2023/03/Snapinsta.app_1080_334826492_1391955071611353_6004211555445014415_n_Easy-Resize.com_-842x474.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="staff" style="margin-top: 8%;">
+            <h2 class="title-staff">Conheça nosso Staff</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="data:image/jpeg;base64,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" alt="Diretor Esportivo 1" class="card-img">
+                    <h2>João Silva</h2>
+                    <p>Diretor Esportivo</p>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgO3te01mm3S0XxEt2Pc534I3pqu1fmu9Auw&usqp=CAU" alt="Diretor Esportivo 2" class="card-img">
+                    <h2>José Toledo</h2>
+                    <p>Tesoureiro</p>
+                </div>
+                <div class="card">
+                    <img src="data:image/jpeg;base64,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" alt="Diretor Esportivo 3" class="card-img">
+                    <h2>Pedro Souza</h2>
+                    <p>Assistente</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <h2 class="title-history">História do Campeonato</h2>
+            <div class="content">
+                <p>O Campeonato Amador de Futebol - <strong>FutArena</strong> teve início em 2010, quando um grupo de amigos decidiu organizar um torneio entre os bairros de sua cidade, movidos pela paixão pelo futebol. O que começou como uma competição simples, com poucos times jogando em um campo de terra batida, logo ganhou popularidade.</p>
+                <p>Com o passar dos anos, o torneio cresceu, atraindo mais equipes e a atenção da comunidade local. O apoio de patrocinadores permitiu melhorar a estrutura, e o campeonato se tornou um evento anual esperado, que reúne famílias e amigos para torcer pelos seus times. Hoje, o campeonato é símbolo de união e celebração do esporte amador na região.</p>
+            </div>
+
+            <div class="timeline">
+                <h1>Linha do Tempo do Campeonato Amador de Futebol</h1>
+                <div class="timeline-item" onclick="toggleContent(0)">
+                    <div class="timeline-date">2010</div>
+                    <div class="timeline-content">
+                        <h2>Início do Campeonato</h2>
+                        <p>Um grupo de amigos organiza o primeiro torneio entre os bairros, com poucas equipes e um campo de terra batida.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="toggleContent(1)">
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h2>Crescimento e Patrocínios</h2>
+                        <p>O campeonato começa a ganhar popularidade, atraindo novos times e o apoio de patrocinadores locais, melhorando a infraestrutura.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="toggleContent(2)">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h2>Evento Anual Reconhecido</h2>
+                        <p>O torneio se torna um evento anual aguardado pela comunidade, com participação crescente e uma organização profissional.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="toggleContent(3)">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h2>Expansão Regional</h2>
+                        <p>O campeonato se expande para incluir equipes de cidades vizinhas, consolidando-se como um evento regional importante.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>FutArena</h1>
+                <p>É tudo uma questão de seus sonhos.</p>
+
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3>Contato</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">futArenaCampeonato@gmail.com</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">(14) 99999-9999</a>
+                </li>
+                <li>
+            
+            </ul>
+
+            <div id="footer_subscribe">
+                <h3>Inscreva-se</h3>
+
+                <p>
+                    Inscreva seu time para participar conosco
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="icon fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2023 FutArena - Todos Os Direitos Reservados
+        </div>
+    </footer>
+</body>
+</html>
